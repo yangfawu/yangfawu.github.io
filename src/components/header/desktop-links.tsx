@@ -5,7 +5,6 @@ interface Props {
 }
 export default function DesktopLinks({ data }: Props) {
     return (
-        // default shown until screen hits [sm]
         <div className="hidden sm:ml-6 sm:flex items-center">
             <div className="flex space-x-4">
                 {data.map(({ name, href }) => (

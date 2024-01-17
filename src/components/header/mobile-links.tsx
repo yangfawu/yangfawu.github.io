@@ -6,7 +6,6 @@ interface Props {
 }
 export default function MobileLinks({ data }: Props) {
     return (
-        // default hidden until screen hits [sm]
         <Disclosure.Panel className="sm:hidden">
             <div className="border-t-2 border-gray-700 pb-2">
                 {data.map(({ name, href }) => (
