@@ -6,13 +6,9 @@ export default function Recipe() {
             <p>
                 Site built with{" "}
                 <ExternalLink href="https://react.dev/">React</ExternalLink> and{" "}
-                <ExternalLink href="https://tailwindcss.com/">
-                    Tailwind
-                </ExternalLink>
+                <ExternalLink href="https://tailwindcss.com/">Tailwind</ExternalLink>
                 . Click{" "}
-                <ExternalLink href="https://github.com/yangfawu/yangfawu.github.io">
-                    here
-                </ExternalLink>
+                <ExternalLink href="https://github.com/yangfawu/yangfawu.github.io">here</ExternalLink>
                 {" "}for the repo!
             </p>
         </footer>

@@ -23,7 +23,7 @@ export default function Footer({ id }: Props) {
                             <ExternalLink href="tel:16467555009">+1 (646) 755-5009</ExternalLink>
                         </Contact>
                         <Contact Icon={GlobeAltIcon}>
-                            <ExternalLink href="https://github.com/yangfawu/">Github @yangfawu</ExternalLink>
+                            <ExternalLink href="https://github.com/yangfawu/">GitHub @yangfawu</ExternalLink>
                         </Contact>
                     </div>
                     <div className="flex items-end">
