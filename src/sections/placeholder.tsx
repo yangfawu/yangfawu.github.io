@@ -11,7 +11,7 @@ export default function PlaceHolder({ id }: Props) {
             <div className="space-y-6">
                 <h1 className="text-4xl font-bold">Hey there!</h1>
                 <p className="font-mono max-w-md">
-                    The site is currently in the progress of being rebuilt. I am trying to adopt more <ExternalLink href="https://tailwindcss.com/">Tailwind</ExternalLink> into my frontend projects. I may also consider sprinkling in some small <ExternalLink href="https://threejs.org/">Three.js</ExternalLink> details. In the meantime, feel free to check out my projects on GitHub.
+                    The site is currently in the progress of being rebuilt. I am trying to adopt <ExternalLink href="https://tailwindcss.com/">Tailwind</ExternalLink> into more of my frontend projects. I may also consider sprinkling in some small <ExternalLink href="https://threejs.org/">Three.js</ExternalLink> details. In the meantime, feel free to check out my projects on GitHub.
                 </p>
                 <div className="flex">
                     <a className="border-2 border-slate-100 text-black font-mono py-2 px-4 transition duration-300 bg-slate-100 hover:bg-slate-300 hover:border-slate-300 hover:text-red-600 flex items-center gap-3" href="https://github.com/yangfawu" target="_blank">
