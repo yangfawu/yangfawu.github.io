@@ -2,7 +2,7 @@
 
 ### Description
 
-This is my personal website for the time being. In the future, I may port over to NextJS to add a blog expansion to keep track of cool techs and concepts I learned in the past years. 
+Welcome to my personal website.
 
 ### Tools
 

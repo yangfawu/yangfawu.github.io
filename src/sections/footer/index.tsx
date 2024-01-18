@@ -1,6 +1,6 @@
 import Section from "../../components/section"
 import logo from "../../assets/logo.svg"
-import { EnvelopeIcon, GlobeAltIcon, PhoneIcon } from "@heroicons/react/24/outline"
+import { EnvelopeIcon, GlobeAltIcon, LinkIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import ExternalLink from "../../components/external-link"
 import Contact from "./contact"
 import ButtonLink from "../../components/button-link"
@@ -22,8 +22,11 @@ export default function Footer({ id }: Props) {
                         <Contact Icon={PhoneIcon}>
                             <ExternalLink href="tel:16467555009">+1 (646) 755-5009</ExternalLink>
                         </Contact>
+                        <Contact Icon={LinkIcon}>
+                            <ExternalLink href="https://www.linkedin.com/in/yangfa-wu/">in/yangfa-wu</ExternalLink>
+                        </Contact>
                         <Contact Icon={GlobeAltIcon}>
-                            <ExternalLink href="https://github.com/yangfawu/">GitHub @yangfawu</ExternalLink>
+                            <ExternalLink href="https://github.com/yangfawu/">gh/yangfawu</ExternalLink>
                         </Contact>
                     </div>
                     <div className="flex items-end">
