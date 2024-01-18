@@ -1,5 +1,5 @@
 import Section from "../../components/section"
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.svg"
 import { EnvelopeIcon, GlobeAltIcon, PhoneIcon } from "@heroicons/react/24/outline"
 import ExternalLink from "../../components/external-link"
 import Contact from "./contact"

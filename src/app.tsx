@@ -10,7 +10,7 @@ export default function App() {
     return (
         <>
             <Header />
-            <div className="h-36" />
+            <div className="h-2 sm:h-36" />
             <AboutMe id={id()} />
             <PlaceHolder id={id()} />
             <div className="h-8 bg-slate-300" />
