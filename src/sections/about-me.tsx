@@ -10,7 +10,7 @@ export default function AboutMe({ id }: Props) {
         <Section id={id} title="About Me">
             <div id="about" />
             <div className="space-y-6">
-                <h1 className="text-4xl font-bold">Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-800 from-red-600">Yangfa</span></h1>
+                <h1 className="text-5xl font-bold">Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-800 from-red-600">Yangfa</span></h1>
                 <p className="font-mono max-w-md">
                     I am an aspiring <UnderlineSpan>Software Engineering</UnderlineSpan> student and programmer based in New York. I have a passion in web development, but I am currently delving into the world of <UnderlineSpan>backend development</UnderlineSpan> with a focus on cloud services. Fascinated by cutting-edge technologies, I am also exploring topics like GPT-3 and custom language compilers at the moment.
                 </p>
