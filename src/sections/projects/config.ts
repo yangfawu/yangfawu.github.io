@@ -1,2 +1,2 @@
 // in seconds
-export const PROJECT_DURATION = 5
+export const PROJECT_DURATION = 20
