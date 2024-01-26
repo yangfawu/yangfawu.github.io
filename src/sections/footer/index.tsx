@@ -10,7 +10,7 @@ interface Props {
 }
 export default function Footer({ id }: Props) {
     return (
-        <Section id={id} title="Contact Me" background="bg-slate-300">
+        <Section id={id} title="Contact Me" background="bg-slate-100/70">
             <div id="contact"></div>
             <div className="space-y-8">
                 <img className="h-16 w-auto sm:h-20" src={logo} alt="Yangfa Wu" />
