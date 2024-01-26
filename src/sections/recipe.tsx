@@ -2,7 +2,7 @@ import ExternalLink from "../components/external-link"
 
 export default function Recipe() {
     return (
-        <footer className="flex p-4 text-sm justify-center">
+        <footer className="flex p-4 text-sm justify-center bg-slate-300">
             <p>
                 Site built with{" "}
                 <ExternalLink href="https://react.dev/">React</ExternalLink> and{" "}
