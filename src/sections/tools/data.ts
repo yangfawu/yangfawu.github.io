@@ -10,7 +10,7 @@ import NextLogo from "../../assets/nextjs-logo.svg"
 import MysqlLogo from "../../assets/mysql-logo.png"
 import PostgresqlLogo from "../../assets/postgresql-logo.svg"
 import SqliteLogo from "../../assets/sqlite-logo.svg"
-import MongodbLogo from "../../assets/mongodb-logo.png"
+import MongodbLogo from "../../assets/mongodb-logo.svg"
 
 export interface ToolDetails {
     name: string
