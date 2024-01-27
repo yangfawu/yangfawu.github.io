@@ -1,16 +1,12 @@
-import { ReactNode } from "react"
+import tw from "tailwind-styled-components"
 
-interface Props {
-    onClick: () => void
-    children?: ReactNode
-}
-export default function ActionButton({ onClick, children }: Props) {
-    return (
-        <button
-            className="rounded-full w-7 h-7 p-1 hover:bg-slate-100 hover:text-slate-800"
-            onClick={onClick}
-        >
-            {children}
-        </button>
-    )
-}
+const ActionButton = tw.button`
+    rounded-full
+    w-7
+    h-7
+    p-1
+    hover:bg-slate-100
+    hover:text-slate-800
+`
+
+export default ActionButton

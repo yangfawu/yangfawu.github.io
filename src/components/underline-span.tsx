@@ -1,13 +1,10 @@
-import { ReactNode } from "react"
+import tw from "tailwind-styled-components"
 
-interface Props {
-    children?: ReactNode
-}
-export default function UnderlineSpan({ children }: Props) {
-    return (
-        <span className
-            ="underline underline-offset-4 decoration-2 decoration-blue-400 dark:decoration-blue-600">
-            {children}
-        </span>
-    )
-}
+const UnderlineSpan = tw.span`
+    underline 
+    underline-offset-4 
+    decoration-2 
+    decoration-blue-400
+`
+
+export default UnderlineSpan

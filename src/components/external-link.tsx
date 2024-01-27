@@ -1,13 +1,13 @@
-import { ReactNode } from "react"
+import tw from "tailwind-styled-components"
 
-interface Props {
-    href: string
-    children?: ReactNode
+const ExternalLink = tw.a`
+    underline
+    underline-offset-2
+    hover:text-red-600
+`
+ExternalLink.defaultProps = {
+    target: "_blank",
+    rel: "noopener noreferrer",
 }
-export default function ExternalLink({ href, children }: Props) {
-    return (
-        <a className="underline underline-offset-2 hover:text-red-600" href={href} target="_blank">
-            {children}
-        </a>
-    )
-}
+
+export default ExternalLink
