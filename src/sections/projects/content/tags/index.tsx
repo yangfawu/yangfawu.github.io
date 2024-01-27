@@ -12,7 +12,7 @@ export default function Tags({ prefix, data, isComplete }: Props) {
         <Column title="Tags">
             <div key={prefix} className="flex flex-wrap items-start gap-2">
                 <Fade triggerOnce cascade damping={0.1}>
-                    {!isComplete && <Item highlight>In Progress</Item>}
+                    {!isComplete && <Item $highlight>In Progress</Item>}
                     {data.map(tag => (
                         <Item key={tag}>{tag}</Item>
                     ))}

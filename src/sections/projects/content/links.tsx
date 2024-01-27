@@ -16,7 +16,7 @@ export default function Links({ data }: Props) {
     return (
         <Column title="Links">
             <div className="space-y-2">
-                <Fade triggerOnce cascade damping={0.4}>
+                <Fade triggerOnce cascade damping={0.2} direction="right">
                     {data.map(({ name, type, url }) => (
                         <p key={url}>
                             <a

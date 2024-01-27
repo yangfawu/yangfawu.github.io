@@ -16,9 +16,12 @@ export default function AboutMe({ id }: Props) {
                         <span>Hi</span>
                     </AttentionSeeker>
                     <span>, I'm&nbsp;</span>
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-800 from-red-600">
-                        Yangfa
-                    </span>
+                    <div>
+                        {/* div needed to prevent text clipping */}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r to-red-800 from-red-600">
+                            Yangfa
+                        </span>
+                    </div>
                 </h1>
                 <p className="font-mono max-w-md">
                     I am an aspiring{" "}

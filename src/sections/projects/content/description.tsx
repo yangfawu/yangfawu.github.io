@@ -13,13 +13,11 @@ export default function Description({ prefix, data, note }: Props) {
                 <Fade key={prefix} cascade triggerOnce damping={0.3}>
                     <p>{data}</p>
                     {note && (
-                        <>
-                            <p className="text-sm font-bold text-red-600 pt-8">
-                                NOTE
-                            </p>
-                            <p>{note}</p>
-                        </>
+                        <p className="text-sm font-bold text-red-600 pt-8">
+                            NOTE
+                        </p>
                     )}
+                    {note && <p>{note}</p>}
                 </Fade>
             </div>
         </Column>
