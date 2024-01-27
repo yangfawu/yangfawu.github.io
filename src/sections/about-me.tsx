@@ -1,6 +1,6 @@
-import ButtonLink from "../components/button-link"
-import Section from "../components/section"
-import UnderlineSpan from "../components/underline-span"
+import ButtonLink from "@components/button-link"
+import Section from "@components/section"
+import UnderlineSpan from "@components/underline-span"
 
 interface Props {
     id: number

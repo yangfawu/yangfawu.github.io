@@ -1,4 +1,4 @@
-import Section from "../../components/section"
+import Section from "@components/section"
 import Column from "./column"
 import { DATABASES, FRAMEWORKS, LANGUAGES } from "./data"
 
