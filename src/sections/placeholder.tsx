@@ -1,6 +1,6 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline"
-import ExternalLink from "../components/external-link"
-import Section from "../components/section"
+import ExternalLink from "@components/external-link"
+import Section from "@components/section"
 
 interface Props {
     id: number

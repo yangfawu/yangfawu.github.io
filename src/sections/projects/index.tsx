@@ -1,4 +1,4 @@
-import Section from "../../components/section"
+import Section from "@components/section"
 import Content from "./content"
 import DATA from "./data"
 import NavigationProvider from "./navigation-provider"

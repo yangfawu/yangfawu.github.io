@@ -1,4 +1,4 @@
-import Header from "./components/header"
+import Header from "@components/header"
 import AboutMe from "./sections/about-me"
 import Footer from "./sections/footer"
 import Projects from "./sections/projects"

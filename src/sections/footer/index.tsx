@@ -1,9 +1,9 @@
-import Section from "../../components/section"
-import logo from "../../assets/logo.svg"
+import Section from "@components/section"
+import logo from "@assets/logo.svg"
 import { EnvelopeIcon, GlobeAltIcon, LinkIcon, PhoneIcon } from "@heroicons/react/24/outline"
-import ExternalLink from "../../components/external-link"
+import ExternalLink from "@components/external-link"
 import Contact from "./contact"
-import ButtonLink from "../../components/button-link"
+import ButtonLink from "@components/button-link"
 
 interface Props {
     id: number
