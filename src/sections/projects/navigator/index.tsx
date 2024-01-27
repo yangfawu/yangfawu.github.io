@@ -6,25 +6,13 @@ import {
 } from "@heroicons/react/24/outline"
 import TextTransition from "react-text-transition"
 import ActionButton from "./action-button"
+import { useContext } from "react"
+import { NavigationContext } from "../navigation-provider"
 
-interface Props {
-    auto: boolean
-    progress: number
-    size: number
-    index: number
-    back: () => void
-    next: () => void
-    toggle: () => void
-}
-export default function Navigator({
-    size,
-    index,
-    auto,
-    progress,
-    toggle,
-    back,
-    next,
-}: Props) {
+export default function Navigator() {
+    const { size, index, auto, progress, toggle, back, next } =
+        useContext(NavigationContext)
+
     return (
         <div className="space-y-4">
             <div className="flex items-center justify-end gap-2">
