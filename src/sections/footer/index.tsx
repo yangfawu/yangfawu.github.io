@@ -18,7 +18,7 @@ export default function Footer({ id }: Props) {
         <Section
             id={id}
             anchor="contact"
-            title="Contact Me"
+            title="/contact"
             background="bg-slate-100/70"
         >
             <div className="space-y-8">

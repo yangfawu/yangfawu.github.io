@@ -8,6 +8,15 @@ export default {
             backgroundImage: {
                 paint: "url('/pawel-czerwinski-OG44d93iNJk-unsplash.png')",
             },
+            keyframes: {
+                wiggle: {
+                    "0%, 100%": { transform: "rotate(-15deg)" },
+                    "50%": { transform: "rotate(15deg)" },
+                },
+            },
+            animation: {
+                wiggle: "wiggle 1s ease-in-out infinite",
+            },
         },
         screens: {
             xs: "475px",

@@ -8,7 +8,7 @@ interface Props {
 }
 export default function AboutMe({ id }: Props) {
     return (
-        <Section id={id} anchor="about" title="About Me">
+        <Section id={id} anchor="about" title="/about">
             <div className="space-y-6">
                 <h1 className="text-5xl font-bold flex items-baseline">
                     <AttentionSeeker effect="bounce">

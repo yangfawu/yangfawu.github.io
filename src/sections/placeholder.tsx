@@ -10,7 +10,7 @@ export default function PlaceHolder({ id }: Props) {
         <Section
             id={id}
             anchor="placeholder"
-            title="Coming Soon"
+            title="/coming-soon"
             background="bg-slate-900"
             color="text-slate-100"
         >

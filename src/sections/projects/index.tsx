@@ -12,7 +12,7 @@ export default function Projects({ id }: Props) {
         <Section
             id={id}
             anchor="projects"
-            title="Projects"
+            title="/projects"
             background="bg-slate-900"
             color="text-slate-100"
         >
