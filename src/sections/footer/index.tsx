@@ -1,5 +1,4 @@
 import logo from "@assets/logo.svg"
-import ButtonLink from "@components/button-link"
 import ExternalLink from "@components/external-link"
 import Section from "@components/section"
 import {
@@ -7,6 +6,7 @@ import {
     GlobeAltIcon,
     LinkIcon,
     PhoneIcon,
+    RocketLaunchIcon,
 } from "@heroicons/react/24/outline"
 import Contact from "./contact"
 
@@ -51,11 +51,19 @@ export default function Footer({ id }: Props) {
                         </Contact>
                     </div>
                     <div className="flex items-end">
-                        <ButtonLink href="#">Return to Top</ButtonLink>
+                        <a
+                            className="animate-bounce p-2 border-2 border-red-600 rounded-full relative group"
+                            href="#"
+                        >
+                            <RocketLaunchIcon className="h-6 w-6 text-red-600 group-active:animate-ping" />
+                            <p className="text-nowrap text-center text-xs hidden group-hover:block absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full bg-slate-800 text-white py-1 px-2 rounded-full">
+                                return to top
+                            </p>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div className="hidden sm:block h-16" />
+            <div className="hidden sm:block h-8" />
         </Section>
     )
 }
