@@ -7,7 +7,7 @@ interface Props {
 }
 export default function Tools({ id }: Props) {
     return (
-        <Section id={id} title="Tools" anchor="tools" background="bg-slate-300">
+        <Section id={id} title="/tools" anchor="tools" background="bg-slate-300">
             <div className="space-y-8">
                 <h1 className="text-5xl font-bold">Tools</h1>
                 <div className="flex items-stretch flex-wrap gap-x-6 gap-y-8">

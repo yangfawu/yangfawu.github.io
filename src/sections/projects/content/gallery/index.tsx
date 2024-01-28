@@ -7,7 +7,7 @@ interface Props {
 }
 export default function Gallery({ prefix, sources }: Props) {
     return (
-        <div className="rounded-xl w-full flex space-x-6 overflow-x-auto hide-scrollbar">
+        <div className="rounded-lg w-full flex space-x-6 overflow-x-auto hide-scrollbar">
             {sources.length < 1 ? (
                 <Fade
                     key={`${prefix}-not-found`}
@@ -22,7 +22,7 @@ export default function Gallery({ prefix, sources }: Props) {
                 <Fade
                     key={`${prefix}-found`}
                     cascade
-                    direction="left"
+                    direction="right"
                     damping={0.2}
                     className="snap-center shrink-0"
                     triggerOnce

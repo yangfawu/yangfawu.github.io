@@ -6,10 +6,10 @@ import MobileMenu from "./mobile-menu"
 import { Link } from "./types"
 
 const LINKS: Link[] = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Tools", href: "#tools" },
-    { name: "Contact", href: "#contact" },
+    { name: "/about", href: "#about" },
+    { name: "/projects", href: "#projects" },
+    { name: "/tools", href: "#tools" },
+    { name: "/contact", href: "#contact" },
 ]
 
 export default function Header() {
