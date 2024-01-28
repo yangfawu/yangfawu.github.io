@@ -28,7 +28,7 @@ export default function ImageViewerProvider({ children }: Props) {
                     duration={300}
                 >
                     <div
-                        className="w-full h-full py-24 box-border flex items-center justify-center"
+                        className="w-full h-full px-6 py-24 box-border flex items-center justify-center"
                         onClick={close}
                     >
                         <ClickBoundary>
