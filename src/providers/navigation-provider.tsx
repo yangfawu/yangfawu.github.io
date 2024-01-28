@@ -1,5 +1,4 @@
 import { ReactNode, createContext, useEffect, useMemo, useState } from "react"
-import { PROJECT_DURATION } from "./config"
 
 interface ContextProps {
     size: number
@@ -12,12 +11,20 @@ interface ContextProps {
 }
 export const NavigationContext = createContext<ContextProps>(null as any)
 
+const PROJECT_DURATION = 20 // seconds
+
 interface Props {
     data: Array<any>
-    children: ReactNode
+    children?: ReactNode
 }
 export default function NavigationProvider({ data, children }: Props) {
-    const [index, setIndex] = useState(Math.floor(Math.random() * data.length))
+    const [index, setIndex] = useState(() => {
+        // skew towards bigger indices
+        const skewedRandom = Math.pow(Math.random(), 1 - 0.7)
+
+        // obtain a skewed random index
+        return Math.floor(skewedRandom * data.length)
+    })
 
     function cycleNext() {
         setIndex(prev => {

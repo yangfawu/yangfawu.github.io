@@ -4,10 +4,10 @@ import {
     PauseIcon,
     PlayIcon,
 } from "@heroicons/react/24/outline"
-import TextTransition from "react-text-transition"
-import ActionButton from "./action-button"
+import { NavigationContext } from "@providers/navigation-provider"
 import { useContext } from "react"
-import { NavigationContext } from "../navigation-provider"
+import { Fade } from "react-awesome-reveal"
+import ActionButton from "./action-button"
 
 export default function Navigator() {
     const { size, index, auto, progress, toggle, back, next } =
@@ -19,10 +19,12 @@ export default function Navigator() {
                 <ActionButton onClick={back}>
                     <ChevronLeftIcon />
                 </ActionButton>
-                <div className="font-mono flex items-center gap-2">
-                    <TextTransition className="text-red-600">
-                        {formatNumber(index + 1)}
-                    </TextTransition>
+                <div className="font-mono flex items-baseline gap-2">
+                    <Fade direction="up" duration={300}>
+                        <span key={index} className="text-red-600">
+                            {formatNumber(index + 1)}
+                        </span>
+                    </Fade>
                     <span>/</span>
                     <span>{formatNumber(size)}</span>
                 </div>
