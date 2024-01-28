@@ -11,11 +11,11 @@ export default function Projects({ id }: Props) {
     return (
         <Section
             id={id}
+            anchor="projects"
             title="Projects"
             background="bg-slate-900"
             color="text-slate-100"
         >
-            <div id="projects"></div>
             <NavigationProvider data={DATA}>
                 <div className="space-y-8">
                     <div className="flex gap-4 flex-col sm:flex-row sm:justify-between sm:items-baseline">
