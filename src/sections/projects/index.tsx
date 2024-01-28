@@ -1,7 +1,7 @@
 import Section from "@components/section"
+import NavigationProvider from "@providers/navigation-provider"
 import Content from "./content"
 import DATA from "./data"
-import NavigationProvider from "./navigation-provider"
 import Navigator from "./navigator"
 
 interface Props {
