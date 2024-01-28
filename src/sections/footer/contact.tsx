@@ -7,7 +7,9 @@ interface Props {
 export default function Contact({ Icon, children }: Props) {
     return (
         <div className="flex items-center justify-start gap-4">
-            <div><Icon className="h-5" /></div>
+            <div>
+                <Icon className="h-5" />
+            </div>
             <p className="text-sm">{children}</p>
         </div>
     )

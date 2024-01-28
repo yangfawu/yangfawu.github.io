@@ -20,11 +20,11 @@ export default function App() {
             <div className="h-2 sm:h-36" />
             <AboutMe id={idGen()} />
             <Projects id={idGen()} />
-            <div className="h-8 bg-slate-300" />
+            <div className="hidden sm:block h-8 bg-slate-300" />
             <Tools id={idGen()} />
             {/* <div className="h-64" /> */}
             {/* <PlaceHolder id={id()} /> */}
-            <div className="h-8 bg-slate-100/70" />
+            <div className="hidden sm:block h-8 bg-slate-100/70" />
             <Footer id={idGen()} />
             <Recipe />
         </ImageViewerProvider>
