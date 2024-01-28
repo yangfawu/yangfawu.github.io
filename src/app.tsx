@@ -6,11 +6,13 @@ import Projects from "./sections/projects"
 import Recipe from "./sections/recipe"
 import Tools from "./sections/tools"
 
+function generator() {
+    let id = 1
+    return () => id++
+}
+
 export default function App() {
-    function idGen() {
-        let id = 1
-        return id++
-    }
+    const idGen = generator()
 
     return (
         <ImageViewerProvider>
