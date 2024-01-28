@@ -55,7 +55,7 @@ const DATA: ProjectDetails[] = [
             "I built a simple offline 3-player UNO game centered around food themes. The project features draggable and customizable cards for interactive user experience. It also houses a deterministic computer AI that make smart moves based on the current states and future states of the game.",
         tags: ["Angular", "Angular Material", "Game Engine", "Art"],
         images: Object.values(
-            import.meta.glob(`@assets/projects/demo-uno/*.png`, {
+            import.meta.glob(`@assets/projects/demo-uno/*.{png,svg}`, {
                 eager: true,
                 as: "url",
             }),
