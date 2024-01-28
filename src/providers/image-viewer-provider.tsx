@@ -24,7 +24,7 @@ export default function ImageViewerProvider({ children }: Props) {
             </ImageViewerContext.Provider>
             {src && (
                 <Fade
-                    className="fixed top-0 left-0 w-screen h-screen bg-slate-800/75"
+                    className="fixed top-0 left-0 w-screen h-screen bg-slate-800/90"
                     duration={300}
                 >
                     <div
