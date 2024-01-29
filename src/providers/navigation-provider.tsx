@@ -1,4 +1,11 @@
-import { ReactNode, createContext, useEffect, useMemo, useState } from "react"
+import {
+    ReactNode,
+    createContext,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from "react"
 
 interface ContextProps {
     size: number
@@ -13,12 +20,14 @@ interface ContextProps {
 export const NavigationContext = createContext<ContextProps>(null as any)
 
 interface Props {
+    targetRef: ReturnType<typeof useRef<any>>
     data: Array<any>
     duration: number // seconds
     skewness?: number // [0 to 1]
     children?: ReactNode
 }
 export default function NavigationProvider({
+    targetRef,
     data,
     duration,
     skewness = 0,
@@ -31,6 +40,9 @@ export default function NavigationProvider({
         // obtain a skewed random index
         return Math.floor(skewedRandom * data.length)
     })
+    const [onAuto, setAuto] = useState(true)
+    const [onScreen, setOnScreen] = useState(false)
+    const [progress, setProgress] = useState(0)
 
     function next() {
         setIndex(prev => {
@@ -50,22 +62,32 @@ export default function NavigationProvider({
         })
     }
 
-    const [onAuto, setAuto] = useState(true)
-    const [progress, setProgress] = useState(0)
-
     function toggle() {
         setAuto(prev => !prev)
     }
+
+    useEffect(() => {
+        if (!targetRef.current) return
+
+        const observer = new IntersectionObserver(
+            ([entry]) => setOnScreen(entry.isIntersecting),
+            { threshold: 0 },
+        )
+        observer.observe(targetRef.current)
+        return () => observer.disconnect()
+    }, [targetRef])
 
     useEffect(() => {
         setProgress(0)
     }, [index])
 
     useEffect(() => {
-        if (!onAuto) return
+        // we don't want to start the timer if we're not on auto or on screen
+        if (!onAuto || !onScreen) return
+
         const id = window.setInterval(() => setProgress(prev => prev + 1), 1000)
         return () => window.clearInterval(id)
-    }, [onAuto])
+    }, [onAuto, onScreen])
 
     useEffect(() => {
         if (progress > duration) next()
