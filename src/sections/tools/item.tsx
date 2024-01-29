@@ -1,14 +1,15 @@
 import { NavigationContext } from "@providers/navigation-provider"
 import { useContext } from "react"
-import { DATA, ID_TO_INDEX } from "./data"
+import { DATA, ID_TO_INDEX, ToolDetails } from "./data"
 
 interface Props {
-    id: string
     image: any
-    name: string
-    link: string
+    meta: ToolDetails
 }
-export default function Item({ id, image, name, link }: Props) {
+export default function Item({
+    image,
+    meta: { id, name, link, new: isNew },
+}: Props) {
     const { index, goto } = useContext(NavigationContext)
 
     function showComments() {
@@ -20,7 +21,7 @@ export default function Item({ id, image, name, link }: Props) {
     return (
         <div className="flex flex-col items-center gap-1 group">
             <div
-                className={`bg-slate-100 p-4 rounded-full group-hover:bg-red-600/20 transition-colors group-active:bg-red-600 ${activeId === id ? "bg-red-600/20" : ""}`}
+                className={`relative bg-slate-100 p-4 rounded-full group-hover:bg-red-600/20 transition-colors group-active:bg-red-600 ${activeId === id ? "bg-red-600/20" : ""}`}
             >
                 <img
                     src={image}
@@ -28,6 +29,11 @@ export default function Item({ id, image, name, link }: Props) {
                     className="w-12 h-12 box-content object-contain"
                     onClick={showComments}
                 />
+                {isNew && (
+                    <p className="absolute right-2 top-2 -translate-y-1/2 translate-x-1/2 text-xs bg-green-300 rounded-full px-2 py-1 font-mono">
+                        new
+                    </p>
+                )}
             </div>
             <p className="text-sm font-medium">
                 <a
