@@ -6,7 +6,7 @@ export interface ToolDetails {
     new?: boolean
 }
 
-export const TOOLBOOK: Record<string, ToolDetails> = {
+const TOOLBOOK: Record<string, ToolDetails> = {
     ts: {
         id: "ts",
         name: "TypeScript",
@@ -219,7 +219,7 @@ export const TOOLBOOK: Record<string, ToolDetails> = {
 }
 
 export const DATA = (() => {
-    const assets = import.meta.glob("/src/assets/tools/*.{svg,png}", {
+    const assets = import.meta.glob("/src/assets/tools/*.{svg,png,jpg}", {
         eager: true,
         as: "url",
     })
@@ -240,5 +240,13 @@ export const DATA = (() => {
         })
     }
 
+    return out
+})()
+
+export const ID_TO_INDEX = (() => {
+    const out: Record<string, number> = {}
+    for (let i = 0; i < DATA.length; i++) {
+        out[DATA[i].meta.id] = i
+    }
     return out
 })()

@@ -7,33 +7,43 @@ interface ContextProps {
     progress: number
     back: () => void
     next: () => void
+    goto: (index: number) => void
     toggle: () => void
 }
 export const NavigationContext = createContext<ContextProps>(null as any)
 
-const PROJECT_DURATION = 20 // seconds
-
 interface Props {
     data: Array<any>
+    duration: number // seconds
+    skewness?: number // [0 to 1]
     children?: ReactNode
 }
-export default function NavigationProvider({ data, children }: Props) {
+export default function NavigationProvider({
+    data,
+    duration,
+    skewness = 0,
+    children,
+}: Props) {
     const [index, setIndex] = useState(() => {
         // skew towards bigger indices
-        const skewedRandom = Math.pow(Math.random(), 1 - 0.7)
+        const skewedRandom = Math.pow(Math.random(), 1 - skewness)
 
         // obtain a skewed random index
         return Math.floor(skewedRandom * data.length)
     })
 
-    function cycleNext() {
+    function next() {
         setIndex(prev => {
             const next = prev + 1
             return next < data.length ? next : 0
         })
     }
 
-    function cycleBack() {
+    function goto(index: number) {
+        setIndex(index % data.length)
+    }
+
+    function back() {
         setIndex(prev => {
             const next = prev - 1
             return next < 0 ? data.length - 1 : next
@@ -43,7 +53,7 @@ export default function NavigationProvider({ data, children }: Props) {
     const [onAuto, setAuto] = useState(true)
     const [progress, setProgress] = useState(0)
 
-    function toggleAuto() {
+    function toggle() {
         setAuto(prev => !prev)
     }
 
@@ -58,12 +68,12 @@ export default function NavigationProvider({ data, children }: Props) {
     }, [onAuto])
 
     useEffect(() => {
-        if (progress > PROJECT_DURATION) cycleNext()
-    }, [progress])
+        if (progress > duration) next()
+    }, [progress, duration])
 
     const cssProgress = useMemo(
-        () => Math.round((progress / PROJECT_DURATION) * 100),
-        [progress],
+        () => Math.round((progress / duration) * 100),
+        [progress, duration],
     )
 
     return (
@@ -73,9 +83,10 @@ export default function NavigationProvider({ data, children }: Props) {
                 index,
                 auto: onAuto,
                 progress: cssProgress,
-                back: cycleBack,
-                next: cycleNext,
-                toggle: toggleAuto,
+                back,
+                next,
+                goto,
+                toggle,
             }}
         >
             {children}
