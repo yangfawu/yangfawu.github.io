@@ -19,15 +19,15 @@ export default function Item({
     const activeId = DATA[index % DATA.length].meta.id
 
     return (
-        <div className="flex flex-col items-center gap-1 group">
+        <div className="flex flex-col items-center gap-1">
             <div
-                className={`relative bg-slate-100 p-4 rounded-full group-hover:bg-red-600/20 transition-colors group-active:bg-red-600 ${activeId === id ? "bg-red-600/20" : ""}`}
+                className={`relative bg-slate-100 p-4 rounded-full hover:bg-red-600/20 transition-colors active:bg-red-600 ${activeId === id ? "bg-red-600/20" : ""}`}
+                onClick={showComments}
             >
                 <img
                     src={image}
                     alt={name}
                     className="w-12 h-12 box-content object-contain"
-                    onClick={showComments}
                 />
                 {isNew && (
                     <p className="absolute right-2 top-2 -translate-y-1/2 translate-x-1/2 text-xs bg-green-300 rounded-full px-2 py-1 font-mono">

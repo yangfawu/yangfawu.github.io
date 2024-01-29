@@ -21,7 +21,7 @@ export default function Tools({ id }: Props) {
                 <NavigationProvider data={DATA} duration={10}>
                     <div className="flex-1 flex flex-wrap gap-6">
                         {DATA.map(({ image, meta }) => (
-                            <Item key={id} image={image} meta={meta} />
+                            <Item key={meta.id} image={image} meta={meta} />
                         ))}
                     </div>
                     <div className="hidden sm:block h-1" />
