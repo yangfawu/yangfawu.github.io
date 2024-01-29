@@ -9,7 +9,10 @@ import { useContext } from "react"
 import { Fade } from "react-awesome-reveal"
 import ActionButton from "./action-button"
 
-export default function Navigator() {
+interface Props {
+    dark?: boolean
+}
+export default function Navigator({ dark }: Props) {
     const { size, index, auto, progress, toggle, back, next } =
         useContext(NavigationContext)
 
@@ -37,7 +40,7 @@ export default function Navigator() {
             </div>
             {auto && (
                 <div className="max-w-32 ml-auto">
-                    <div className="h-1 w-full bg-slate-300 rounded-full">
+                    <div className={`h-1 w-full ${dark ? "bg-slate-800" : "bg-slate-300"} rounded-full`}>
                         <div
                             className="h-1 bg-red-600 transition-[width]"
                             style={{ width: `${progress}%` }}
