@@ -13,9 +13,14 @@ export default {
                     "0%, 100%": { transform: "rotate(-15deg)" },
                     "50%": { transform: "rotate(15deg)" },
                 },
+                "infinite-scroll": {
+                    "0%": { transform: "translateX(0)" },
+                    "100%": { transform: "translateX(-100%)" },
+                },
             },
             animation: {
                 wiggle: "wiggle 1s ease-in-out infinite",
+                "infinite-scroll": "infinite-scroll 10s linear infinite",
             },
         },
         screens: {
