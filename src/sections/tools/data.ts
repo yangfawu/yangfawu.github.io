@@ -102,7 +102,7 @@ const TOOLBOOK: Record<string, ToolDetails> = {
     },
     rhf: {
         id: "rhf",
-        name: "React Hook Form",
+        name: "RHF",
         comment:
             "Forms are a huge part of frontends - and this library makes forms extremely easy to scale, maintain, and control inside the React framework.",
         link: "https://react-hook-form.com/",
@@ -143,7 +143,7 @@ const TOOLBOOK: Record<string, ToolDetails> = {
     },
     vsc: {
         id: "vsc",
-        name: "Visual Studio Code",
+        name: "VSC",
         comment:
             "This is my go-to IDE for most projects. It is very lightweight and easily customizable.",
         link: "https://code.visualstudio.com/",
