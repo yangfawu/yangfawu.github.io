@@ -291,6 +291,31 @@ const DATA: ProjectDetails[] = [
             },
         ],
     },
+    {
+        id: "blog",
+        title: "Blog",
+        description: "I am currently working on a blog site that will host my personal experiences and interesting finds. The site is being built with Next.js and deployed on Vercel.",
+        tags: ["Next.js", "Vercel", "Tailwind"],
+        images: Object.values(
+            import.meta.glob(`@assets/projects/blog/*.png`, {
+                eager: true,
+                as: "url",
+            }),
+        ),
+        isComplete: true,
+        links: [
+            {
+                name: null,
+                url: "https://github.com/yangfawu/blog/",
+                type: ProjectLinkType.GITHUB,
+            },
+            {
+                name: null,
+                url: "https://yangfawu-blog.vercel.app/",
+                type: ProjectLinkType.DEPLOYMENT,
+            },
+        ]
+    }
 ]
 
 export default DATA

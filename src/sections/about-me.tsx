@@ -44,6 +44,12 @@ export default function AboutMe({ id }: Props) {
                 <div className="flex flex-wrap gap-4">
                     <ButtonLink href="#contact">Contact Me</ButtonLink>
                     <ButtonLink href="#projects">Browse My Projects</ButtonLink>
+                    <ButtonLink
+                        href="https://yangfawu-blog.vercel.app/"
+                        target="_blank"
+                    >
+                        Surf My Blog
+                    </ButtonLink>
                 </div>
                 <div className="h-8 sm:h-16" />
             </div>
